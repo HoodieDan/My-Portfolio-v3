@@ -1,0 +1,87 @@
+@import './base.css';
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+  transition: all 0.8s ease-out;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  background-color: #FFF;
+  color: #333333;
+  font-family: 'Oxygen', sans-serif;
+}
+
+a {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333333;
+  font-family: 'Heebo', sans-serif;
+}
+
+a:hover {
+  color: #333333;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Heebo', sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: calc(3rem + 0.8vw);
+}
+
+.link-div {
+  position: relative;
+  display: inline-block;
+}
+
+.link::before {
+  content: "";
+  background: linear-gradient(269.82deg, #47A8BD 0%, #DAEEF2 55.17%);
+  height: 4px;
+  width: 50%;
+  position: absolute;
+  top: 108%;
+  transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);    
+  -moz-transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.link:hover:before {
+  width: 100%;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.route-name {
+  font-family: 'Grandstander', sans-serif;
+}
+
+.route-name:before {
+  content: "";
+  background: #47A8BD;
+  height: 10px;
+  position: absolute;
+  width: 50%;
+  top: 85%;
+}
