@@ -1,16 +1,19 @@
 <template>
   <div class="background">
-    <img src="../assets/images/ellipse-bg-2.png" alt="bg" class="bg-2">
+    <!-- <img src="../assets/images/ellipse-bg-1.png" alt="bg" class="bg-1">
+    <img src="../assets/images/ellipse-bg-2.png" alt="bg" class="bg-2"> -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
     <div class="container z-1">
 
       <div class="top">
-        <div class="row pt-3">
-          <div class="col-lg-7 col-md-7">
+        <div class="row pt-4">
+          <div class="col-lg-7 col-md-7 col-sm-7 col-8">
             <NameAndProfession />
           </div>
-          <div class="col-lg-5 col-md-5 d-flex justify-content-end align-items-start pt-3">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-4 d-flex justify-content-end align-items-start pt-3">
             <div class="link-div">
-              <a href="#" class="link">Resume</a>
+              <a href="https://docs.google.com/document/d/1W6MK71GxSS7dBXeZn_nq-dnQvmx76AhynhKj8cp9XQ4/edit?usp=sharing" target="_blank" class="link">Resume</a>
             </div>
           </div>
         </div>
@@ -21,8 +24,8 @@
           <div class="col-lg-7 col-md-7 d-flex align-items-center">
             <CraftingExperiences />
           </div>
-          <div class="col-lg-2"></div>
-          <div class="col-lg-3 col-md-5 d-flex align-items-center">
+          <!-- <div class="col-lg-2 col-0 laptop"></div> -->
+          <div class="col-lg-3 col-md-5 col-0 d-flex align-items-center nav-links">
             <NavigationLinks />
           </div>
         </div>
@@ -53,15 +56,18 @@ export default {
 </script>
 
 <style scoped> 
-/* .page {
-  background: url('../assets/images/ellipse-bg-1.png');
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-} */
-.hide {
-  overflow-y: hidden;
+.background {
+  overflow: hidden;
 }
-.background::before {
+.top {
+  height: 15vh;
+}
+.middle {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+}
+/* .background::before {
   content: "";
   background-image: url("../assets/images/ellipse-bg-1.png");
   position: absolute;
@@ -72,6 +78,15 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  z-index: -1;
+  opacity: 70%;
+  animation: move-bg-1 15s ease-in-out infinite;
+} */
+.bg-1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
   /* z-index: -1; */
   opacity: 70%;
   animation: move-bg-1 15s ease-in-out infinite;
@@ -101,42 +116,6 @@ export default {
   background-size: 200% 200%;
 }
 
-@keyframes move-bg-1 {
-  0% {
-    transform: translateZ(200px);
-  }
-  25% {
-    transform: translateX(300px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  75% {
-    transform: translateX(100px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
-@keyframes move-bg-2 {
-  0% {
-    transform: translateZ(-200px);
-  }
-  25% {
-    transform: translateX(-100px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  75% {
-    transform: translateX(-100px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -150,16 +129,24 @@ export default {
 }
 
 @media (min-width: 992px) {
-  .top {
-    height: 15%;
-    /* display: flex;
-    align-items: center; */
-  }
-  .middle {
-    height: 85%;
-    display: flex;
-    align-items: center;
+  .nav-links {
+    padding-left: 8rem;
   }
 }
 
+@media (min-width: 768px) {
+  
+  .nav-links {
+    padding-left: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+  .blob {
+    width: 200px;
+  }
+}
 </style>

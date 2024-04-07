@@ -1,11 +1,12 @@
 @import './base.css';
 
-body {
+body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   /* scroll-behavior: smooth; */
   transition: all 0.8s ease-out;
+  background-color: #FFF;
 }
 
 * {
@@ -84,4 +85,89 @@ h1 {
   position: absolute;
   width: 50%;
   top: 85%;
+}
+
+.blob {
+  position: absolute;
+  opacity: 0.3;
+  width: 300px;
+  aspect-ratio: 1/1;
+  /* animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+    alternate forwards; */
+  filter: blur(40px);
+  /* z-index: -1; */
+  background: linear-gradient(
+    47deg,
+    #47A8BD 21%,
+    #47A8BD 67%,
+    #47A8BD 81%
+  );
+}
+
+.blob-1 {
+  top: 0;
+  right: 0;
+  animation: move-bg-1 10s ease infinite
+    alternate forwards;
+}
+
+.blob-2 {
+  bottom: 5rem;
+  left: 0;
+  animation: move-bg-2 10s ease infinite
+    alternate forwards;
+}
+
+@keyframes move-bg-1 {
+  0% {
+    transform: translateZ(20%);
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+  }
+  25% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateY(80%);
+    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+    rotate: 41deg;
+    scale: 1.15;
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+    rotate: -60deg;
+    scale: 1.05;
+  }
+}
+
+@keyframes move-bg-2 {
+  0% {
+    transform: translateZ(80%);
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+  }
+  25% {
+    transform: translateX(40%);
+  }
+  50% {
+    transform: translateY(0px);
+    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+    rotate: 41deg;
+  }
+  75% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translate(0);
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+    rotate: -60deg;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: calc(2rem + 0.8vw);
+  }
 }

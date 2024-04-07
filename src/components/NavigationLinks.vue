@@ -1,16 +1,16 @@
 <template>
     <div class="d-flex column justify-content-evenly align-items-start">
         <div class="link-div">
-            <RouterLink to="#" class="router-link active link">Home</RouterLink>
+            <RouterLink to="/" class="router-link active link">Home</RouterLink>
         </div>
         <div class="link-div">
-            <RouterLink to="#" class="router-link link">Projects</RouterLink>
+            <RouterLink to="/projects" class="router-link projects-link link">Projects</RouterLink>
         </div>
         <div class="link-div">
-            <RouterLink to="#" class="router-link link">About</RouterLink>
+            <RouterLink to="/about" class="router-link about-link link">About</RouterLink>
         </div>
         <div class="link-div">
-            <RouterLink to="/contact" class="router-link link">Contact</RouterLink>
+            <RouterLink to="/contact" class="router-link contact-link link">Contact</RouterLink>
         </div>
     </div>
 </template>
@@ -28,15 +28,28 @@ export default {
     margin-top: 1rem;
 }
 
-.link:before {
-    background: #47A8BD;
+.router-link:before {
+    content: "";
+    position: absolute;
+    top: 108%;
     height: 10px;
     width: 0;
     top: 85%;
 }
 
-.link:hover::before {
+.projects-link:hover:before {
     width: 50%;
+    background: #8661C1;
+}
+
+.about-link:hover:before {
+    width: 50%;
+    background: #EC9192;
+}
+
+.contact-link:hover:before {
+    width: 50%;
+    background: #5FB49C;
 }
 
 .active {
@@ -45,6 +58,7 @@ export default {
 
 .active::before {
     width: 50%;
+    background: #47A8BD;
 }
 
 .router-link {

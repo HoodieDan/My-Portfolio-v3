@@ -9,7 +9,7 @@
                 Join me as I navigate the ever-evolving world of web development, one pixel and line of code at a time.
             </p>
             <div class="link-div">
-              <a href="#" class="link">Get In Touch</a>
+              <a href="mailto:obodedaniel3@gmail.com" class="link">Get In Touch</a>
             </div>
         </div>
     </div>
@@ -56,5 +56,15 @@ export default {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+@media (max-width: 820px) {
+  .head {
+    margin-bottom: 3rem !important;
+  }
+  .intro {
+    width: 100%;
+    margin-bottom: 3rem !important;
+  }
 }
 </style>
