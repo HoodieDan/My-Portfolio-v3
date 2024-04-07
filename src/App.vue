@@ -41,6 +41,8 @@ export default {
     whenever(keys.arrowRight, () => {
       this.goToNextRoute();
     })
+
+    setTimeout(function () {   window.scrollTo(0, 1); }, 1000);
   },
   methods: {
     goToNextRoute() {
@@ -134,5 +136,11 @@ export default {
 
 .fade-enter-active, .fade-leave-active {
   transition: all .3s ease;
+}
+
+@media (max-width: 768px) {
+  p.copyright {
+    display: none;
+  }
 }
 </style>
