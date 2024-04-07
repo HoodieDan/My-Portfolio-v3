@@ -3,9 +3,9 @@
         <div class="row mid">
             <div class="col-lg-7 col-md-7">
                 <div class="top pt-4">
-                <div class="link-div">
-                    <h1 class="route-name">Projects</h1>
-                </div>
+                  <div class="link-div">
+                      <h1 class="route-name">Projects</h1>
+                  </div>
                 </div>
 
                 <div class="middle">
