@@ -89,7 +89,7 @@ h1 {
 
 .blob {
   position: absolute;
-  opacity: 0.3;
+  opacity: 0.2;
   width: 300px;
   aspect-ratio: 1/1;
   /* animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
@@ -130,7 +130,6 @@ h1 {
     transform: translateY(80%);
     border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
     rotate: 41deg;
-    scale: 1.15;
   }
   75% {
     transform: translateX(-100%);
@@ -139,7 +138,6 @@ h1 {
     transform: translateY(100%);
     border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
     rotate: -60deg;
-    scale: 1.05;
   }
 }
 

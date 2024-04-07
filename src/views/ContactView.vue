@@ -103,12 +103,21 @@ p {
     color: #13241F;
 }
 
+.blob {
+  background: linear-gradient(
+    47deg,
+    #5FB49C 21%,
+    #5FB49C 67%,
+    #5FB49C 81%
+  );
+}
+
 .link {
   transition: all 0.8s linear;
 }
 .link::before {
   content: "";
-  background: linear-gradient(269.82deg, #47A8BD 0%, #DAEEF2 55.17%);
+  background: linear-gradient(269.82deg, #5FB49C 0%, #DAEEF2 55.17%);
   height: 4px;
   width: 100%;
   top: 108%;

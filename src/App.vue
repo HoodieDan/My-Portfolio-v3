@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { useMagicKeys, whenever } from '@vueuse/core'
 
 export default {
   name: 'App',
@@ -29,6 +30,17 @@ export default {
     return {
       routes: ['home', 'projects', 'about', 'contact']
     }
+  },
+  mounted() {
+    const keys = useMagicKeys();
+
+    whenever(keys.arrowLeft, () => {
+      this.goToPrevRoute();
+    })
+
+    whenever(keys.arrowRight, () => {
+      this.goToNextRoute();
+    })
   },
   methods: {
     goToNextRoute() {
@@ -47,11 +59,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+body {
+  /* border: 2rem solid rgb(71, 168, 189, 0.3); */
+}
 .copyright {
   position: absolute;
   bottom: 1vh;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 .view {
