@@ -13,7 +13,7 @@
           </div>
           <div class="col-lg-5 col-md-5 col-sm-5 col-4 d-flex justify-content-end align-items-start pt-3">
             <div class="link-div">
-              <a href="https://docs.google.com/document/d/1W6MK71GxSS7dBXeZn_nq-dnQvmx76AhynhKj8cp9XQ4/edit?usp=sharing" target="_blank" class="link">Resume</a>
+              <a href="https://docs.google.com/document/d/1b2hcwc8pHAdGSQvtxpQRWKAIVVcx-1oe8uDw2yMxMak/edit?usp=sharing" target="_blank" class="link">Resume</a>
             </div>
           </div>
         </div>
@@ -21,11 +21,11 @@
 
       <div class="middle z-1">
         <div class="row pt-3">
-          <div class="col-lg-7 col-md-7 d-flex align-items-center">
+          <div class="col-lg-7 col-md-7 d-flex align-items-center" v-motion-slide-right :delay="200">
             <CraftingExperiences />
           </div>
           <!-- <div class="col-lg-2 col-0 laptop"></div> -->
-          <div class="col-lg-3 col-md-5 col-0 d-flex align-items-center nav-links">
+          <div class="col-lg-3 col-md-5 col-0 d-flex align-items-center nav-links" v-motion-slide-bottom :delay="200">
             <NavigationLinks />
           </div>
         </div>

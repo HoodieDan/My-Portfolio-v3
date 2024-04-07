@@ -14,8 +14,8 @@
     </div>
     <div class="route-navigation">
       <div class="d-flex z-1">
-        <div @click="goToPrevRoute" class="route-div me-2"><font-awesome-icon :icon="['fas', 'angle-left']" /></div>
-        <div @click="goToNextRoute" class="route-div ms-2"><font-awesome-icon :icon="['fas', 'angle-right']" /></div>
+        <div @click="goToPrevRoute" :class="routeHover" class="route-div me-2"><font-awesome-icon :icon="['fas', 'angle-left']" /></div>
+        <div @click="goToNextRoute" :class="routeHover" class="route-div ms-2"><font-awesome-icon :icon="['fas', 'angle-right']" /></div>
       </div>
     </div>
   </div>
@@ -55,14 +55,27 @@ export default {
       const nextRouteIndex = (index - 1) % 4;
       this.$router.push({ name: this.routes[nextRouteIndex] })
     }
+  },
+  computed: {
+    routeHover() {
+      if (this.$route.name === 'about') {
+        return 'about-route';
+      } else if (this.$route.name === 'projects') {
+        return 'projects-route';
+      }  else if (this.$route.name === 'contact') {
+        return 'contact-route';
+      } else {
+        return 'home-route'
+      }
+    }
   }
 }
 </script>
 
 <style>
-body {
-  /* border: 2rem solid rgb(71, 168, 189, 0.3); */
-}
+/* body {
+  border: 2rem solid rgb(71, 168, 189, 0.3);
+} */
 .copyright {
   position: absolute;
   bottom: 1vh;
@@ -92,9 +105,21 @@ body {
   transition: all 0.8s ease;
 }
 
-.route-div:hover {
+.home-route:hover {
   border: 2px solid #47A8BD;
   color: #47A8BD;
+}
+.projects-route:hover {
+  border: 2px solid #8661C1;
+  color: #8661C1;
+}
+.contact-route:hover {
+  border: 2px solid #5FB49C;
+  color: #5FB49C;
+}
+.about-route:hover {
+  border: 2px solid #EC9192;
+  color: #EC9192;
 }
 
 .fade-enter-from {

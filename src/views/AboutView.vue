@@ -21,11 +21,21 @@
           </p>
 
           <h3 class="mt-3">Listen to my favorite album!</h3>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3mH6qwIy9crq0I9YQbOuDf?utm_source=generator" width="90%" height="152" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe
+           style="border-radius:12px" 
+           src="https://open.spotify.com/embed/album/3mH6qwIy9crq0I9YQbOuDf?utm_source=generator" 
+           width="70%" 
+           height="152" 
+           frameBorder="0" 
+           allowfullscreen="true" 
+           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+           loading="lazy"
+           v-motion-pop
+          ></iframe>
         </div>
       </div>
 
-      <div class="col-lg-5 col-md-5 p-4 right">
+      <div class="col-lg-5 col-md-5 p-4 right" v-motion-slide-bottom :delay="200">
         <h3>Experience</h3>
 
         <div class="job">
@@ -144,12 +154,12 @@
             <p><font-awesome-icon :icon="['fas', 'globe']" class="me-2" /> Data Structures</p>
           </div>
         </div> -->
-        <p>Vue.js, React.js, Nuxt.js, Bootstrap, TailwindCSS, HTML, CSS, Web Accessibility, Redux, Pinia, Vuex, Vuetify, 
-          GraphQL, Git, NPM, Yarn, Trello, Figma, Render, Vercel, Restful API, Webpack, Axios, Babel, 
-          Firebase, Vite, Jest, Cypress, VS Code, GSAP, WebSockets, Google APIs, OOP, Data Structures</p>
+        <p>Vue.js | React.js | Nuxt.js | Bootstrap | TailwindCSS | HTML | CSS | Web Accessibility | Redux | Pinia | Vuex | Vuetify | 
+          GraphQL | Git | NPM | Yarn | Trello | Figma | Render | Vercel | Restful API | Webpack | Axios | Babel | 
+          Firebase | Vite | Jest | Cypress | VS Code | GSAP | WebSockets | Google APIs | OOP | Data Structures</p>
 
-        <div class="link-div mt-5">
-          <a href="https://docs.google.com/document/d/1W6MK71GxSS7dBXeZn_nq-dnQvmx76AhynhKj8cp9XQ4/edit?usp=sharing" target="_blank" class="link">View Full Resume</a>
+        <div class="link-div mt-5 mb-5">
+          <a href="https://docs.google.com/document/d/1b2hcwc8pHAdGSQvtxpQRWKAIVVcx-1oe8uDw2yMxMak/edit?usp=sharing" target="_blank" class="link">View Full Resume</a>
         </div>
         
       </div>
@@ -170,6 +180,10 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-y: scroll;
+}
+.middle::-webkit-scrollbar {
+  display: none;
 }
 .right {
   height: 100vh;
@@ -233,14 +247,15 @@ p {
   .middle {
     height: auto;
     margin-bottom: 1rem;
-    margin-top: 1rem
+    margin-top: 1rem;
+    overflow-y: initial;
   }
   .right {
     overflow-y: initial;
   }
   .mid {
     height: 88vh;
-    margin-top: 2vh;
+    /* margin-top: 2vh; */
     overflow-y: scroll;
   }
   .mid::-webkit-scrollbar {

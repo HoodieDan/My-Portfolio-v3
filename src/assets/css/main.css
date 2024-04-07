@@ -15,6 +15,10 @@ body, html {
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 #app {
   background-color: #FFF;
   color: #333333;
@@ -92,8 +96,6 @@ h1 {
   opacity: 0.2;
   width: 300px;
   aspect-ratio: 1/1;
-  /* animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
-    alternate forwards; */
   filter: blur(40px);
   /* z-index: -1; */
   background: linear-gradient(
@@ -120,7 +122,7 @@ h1 {
 
 @keyframes move-bg-1 {
   0% {
-    transform: translateZ(20%);
+    transform: translateZ(-20%);
     border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
   }
   25% {

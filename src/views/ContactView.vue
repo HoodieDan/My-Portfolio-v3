@@ -15,7 +15,7 @@
 
             <div class="middle">
               <div class="row pt-3">
-                  <div class="col-lg-6 col-md-7 col-sm-7">
+                  <div class="col-lg-6 col-md-7 col-sm-7" v-motion-slide-top :delay="200">
                       
                       <div class="h-100 pt-5 pb-5 pe-5">
                           <div class="mt-3">
@@ -44,7 +44,7 @@
                       </div>
                   </div>
                   <!-- <div class="col-lg-1"></div> -->
-                  <div class="col-lg-5 col-md-5 col-sm-5 d-flex align-items-center justify-content-center">
+                  <div class="col-lg-5 col-md-5 col-sm-5 d-flex align-items-center justify-content-center ps-5" v-motion-slide-right :delay="200">
                       <div class="z-1">
                           <h3 class="mb-3">Stay Connected</h3>
                           <p>Connect with me on Twitter and LinkedIn to stay in the loop about my coding 
@@ -149,7 +149,6 @@ p {
 @media (max-width: 768px) {
   .middle {
     overflow-y: scroll;
-    /* overflow-x: hidden; */
     z-index: 1;
     padding-bottom: 2rem;
   }
@@ -165,6 +164,10 @@ p {
 
   .blob {
     width: 200px;
+  }
+
+  .d-flex.ps-5 {
+    padding-left: 1rem !important;
   }
 }
 </style>
