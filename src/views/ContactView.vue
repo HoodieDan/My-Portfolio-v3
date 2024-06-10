@@ -149,6 +149,7 @@ p {
 @media (max-width: 768px) {
   .middle {
     overflow-y: scroll;
+    overflow-x: hidden;
     z-index: 1;
     padding-bottom: 2rem;
   }
@@ -168,6 +169,11 @@ p {
 
   .d-flex.ps-5 {
     padding-left: 1rem !important;
+  }
+
+  .h-100 {
+    height: auto !important;
+    overflow: hidden;
   }
 }
 </style>

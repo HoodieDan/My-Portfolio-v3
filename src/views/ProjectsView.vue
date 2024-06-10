@@ -305,6 +305,9 @@ a.cred-link:hover {
 .middle {
   height: 75vh;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .middle::-webkit-scrollbar {
   display: none;
