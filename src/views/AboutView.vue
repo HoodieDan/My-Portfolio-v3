@@ -154,7 +154,7 @@
             <p><font-awesome-icon :icon="['fas', 'globe']" class="me-2" /> Data Structures</p>
           </div>
         </div> -->
-        <p>Vue.js | React.js | Nuxt.js | Bootstrap | TailwindCSS | HTML | CSS | Web Accessibility | Redux | Pinia | Vuex | Vuetify | 
+        <p>Vue.js | React.js | Nuxt.js| Next.js | React Native | Bootstrap | TailwindCSS | HTML | CSS | Web Accessibility | Redux | Pinia | Vuex | Vuetify | 
           GraphQL | Git | NPM | Yarn | Trello | Figma | Render | Vercel | Restful API | Webpack | Axios | Babel | 
           Firebase | Vite | Jest | Cypress | VS Code | GSAP | WebSockets | Google APIs | OOP | Data Structures</p>
 
